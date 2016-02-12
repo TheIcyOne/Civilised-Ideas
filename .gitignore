@@ -31,6 +31,7 @@ version.properties
 /.project
 /.settings/
 /eclipse/
+\eclipse\
 /debug/
 *.lock
 /.metadata/
@@ -46,3 +47,6 @@ CREDITS-fml.txt
 LICENSE-fml.txt
 MinecraftForge-Credits.txt
 MinecraftForge-License.txt
+*.log
+*.ini
+eclipse/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
