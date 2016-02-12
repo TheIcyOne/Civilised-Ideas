@@ -27,9 +27,9 @@ public class CivilisedIdeas {
 		itemToken = new ItemToken();
 		
 				
-		GameRegistry.registerBlock(blockSwapper, "Civilised Swapper");
+		GameRegistry.registerBlock(blockSwapper, "CivilisedSwapper");
 		
-		GameRegistry.registerItem(itemToken, "Trader's Token");
+		GameRegistry.registerItem(itemToken, "TraderToken");
 	}
 	
 	@EventHandler
