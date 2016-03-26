@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "ci",
+  "name": "Civilised Ideas",
+  "description": "Just the little things you need for a civilised time.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["The_Icy_One"],
+  "credits": "Johnfg12, because he keeps asking for things.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

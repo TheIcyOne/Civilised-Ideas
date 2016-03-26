@@ -15,7 +15,7 @@ public class ItemGrapple extends ItemBow{
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player){
-		grapple = new EntityGrapple(world, player.posX, player.posY, player.posZ, player.rotationPitch, player.rotationYaw);
+		new EntityGrapple(world, player.posX, player.posY, player.posZ, player.rotationPitch, player.rotationYaw);
 		return(item);
 	}
 }
