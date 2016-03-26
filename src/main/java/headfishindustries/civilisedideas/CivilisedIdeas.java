@@ -29,6 +29,12 @@ public class CivilisedIdeas {
 	
 	public static Entity entityGrapple;
 	
+	public static Block BlockOre1;{
+	    BlockOre1 = new BlockOre1();
+	    GameRegistry.registerBlock(BlockOre1, "BlockOre1");
+	}
+
+	
 	@EventHandler
 	public void serverStarting(FMLServerStartingEvent event){
 		ICommandManager cmdManage = event.getServer().getCommandManager();
