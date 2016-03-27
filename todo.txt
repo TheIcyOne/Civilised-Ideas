@@ -1,1 +1,2 @@
-Martian Shiny Ore - Acts like TE shiny but generates on Mars.
+Martian Shiny Ore - Acts like TE shiny but generates on Mars. - done
+work out how models work :P
