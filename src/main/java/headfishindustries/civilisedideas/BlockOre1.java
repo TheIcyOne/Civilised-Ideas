@@ -1,9 +1,9 @@
 package headfishindustries.civilisedideas;
 
 //imports
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -11,10 +11,15 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockOre1 extends Block{
 	
+	private final String name = "BlockOre1";
+	
 	public BlockOre1()	{
 	super(Material.rock);
-	setBlockName(CivilisedIdeas.MODID+ "_" + "martianshiny");
-	setBlockTextureName(CivilisedIdeas.MODID + ":" + "martianshiny");
+	setUnlocalizedName(instance.MODID+ "_" + "martianshiny");
 	setCreativeTab(CreativeTabs.tabBlock);
+	}
+	public String getName()
+	{
+	return name;
 	}
 }
