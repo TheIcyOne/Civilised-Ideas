@@ -4,9 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.command.CommandBase;
+import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.command.PlayerNotFoundException;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ChatComponentText;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommand;
+import net.minecraft.util.text.*;
+
 
 public class GetDim extends CommandBase {
 	@Override
@@ -24,11 +30,11 @@ public class GetDim extends CommandBase {
 		return 0;
 	}
 	
-	@Override
+
 	public boolean canCommandSenderUseCommand(ICommandSender sender){
 		return true;
 	}
-	
+	 
 	@Override
 	public List getCommandAliases(){
 		ArrayList<String> aliases = new ArrayList<String>();
@@ -40,9 +46,21 @@ public class GetDim extends CommandBase {
 		return aliases;
 	}
 	
-	@Override
+
 	public void processCommand(ICommandSender sender, String[] idontneedthis){
-		EntityPlayer player = getCommandSenderAsPlayer(sender);
-		player.addChatMessage(new ChatComponentText("You are in dimension number " + player.dimension));
+		EntityPlayer player = null;
+		try {
+			player = getCommandSenderAsPlayer(sender);
+		} catch (PlayerNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		player.addChatMessage(new TextComponentString("You are in dimension number " + player.dimension));
+	}
+
+	@Override
+	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
+		// TODO Auto-generated method stub
+		
 	}
 }
