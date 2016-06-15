@@ -2,10 +2,13 @@ package headfishindustries.civilisedideas.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import headfishindustries.civilisedideas.CivilisedIdeas;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -21,7 +24,7 @@ public class BlockSlindWeed extends BlockBush {
 		setStepSound(soundTypeGrass);
 		setTickRandomly(false);
 		setBlockBounds(0.05F, 0.0F, 0.1F, 1.0F, 0.3F, 1.0F);
-		
+		setBlockTextureName("ci:SlindWeed");
 	}
 		
 	   @SideOnly(Side.CLIENT)
@@ -34,9 +37,10 @@ public class BlockSlindWeed extends BlockBush {
 		   this.icon = par1.registerIcon("ci:slindWeed");
 		   
 	   }
-	   
-	   public boolean isOpaqueCube() {
-	       return false;
+	
+	   @Override
+	   protected boolean canPlaceBlockOn(Block block){
+		   return block == CivilisedIdeas.blockRedrock || block == CivilisedIdeas.blockBonerock || block == Blocks.grass || block == Blocks.dirt || block == Blocks.farmland;
 	   }
 
 }
