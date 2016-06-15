@@ -2,16 +2,20 @@ package headfishindustries.civilisedideas.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import headfishindustries.civilisedideas.CivilisedIdeas;
+import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockFlower;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.IIcon;
 
-public class BlockWilliWeed extends BlockFlower {
+public class BlockWilliWeed extends BlockBush {
 	
 	private IIcon icon;
 
 	public BlockWilliWeed() {
-		super(0);
+		super(Material.plants);
 		setBlockName("ci_flowerWilliWeed");
 		setHardness(0.2F);
 		setStepSound(soundTypeGrass);
