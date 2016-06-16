@@ -13,6 +13,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import headfishindustries.civilisedideas.block.BlockBonerock;
 import headfishindustries.civilisedideas.block.BlockRedrock;
 import headfishindustries.civilisedideas.block.BlockSlindWeed;
+import headfishindustries.civilisedideas.block.BlockWetrock;
 import headfishindustries.civilisedideas.block.BlockWilliWeed;
 import headfishindustries.civilisedideas.item.ItemGodstear;
 import headfishindustries.civilisedideas.item.ItemWoodenSplinter;
@@ -33,6 +34,7 @@ public class CivilisedIdeas {
 	public static CivilisedIdeas instance;
 	
 	public static Block blockRedrock = new BlockRedrock();
+	public static Block blockWetrock = new BlockWetrock();
 	public static Block blockBonerock = new BlockBonerock();
 	public static Block blockWilliWeed = new BlockWilliWeed();
 	public static Block blockSlindWeed = new BlockSlindWeed();
@@ -66,6 +68,7 @@ public class CivilisedIdeas {
 		
 		GameRegistry.registerBlock(blockBonerock, "Bonerock").setCreativeTab(hypoTab);
 		GameRegistry.registerBlock(blockRedrock, "Redrock").setCreativeTab(hypoTab);
+		GameRegistry.registerBlock(blockWetrock, "Wetrock");
 		GameRegistry.registerBlock(blockSlindWeed, "SlindWeed").setCreativeTab(hypoTab);
 		GameRegistry.registerBlock(blockWilliWeed, "WilliWeed").setCreativeTab(hypoTab);
 		GameRegistry.registerItem(ItemGodstear, "Godstear");
