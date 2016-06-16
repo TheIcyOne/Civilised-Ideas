@@ -21,13 +21,11 @@ public class BlockBonerock extends BlockOre{
 		super();
 		this.setHarvestLevel("pickaxe", 1);
 		setBlockName("ci_rockBone");
+        this.setHardness(1.75F);
+        this.setResistance(12.5F);
 		setBlockTextureName("ci:rockBone");
 	}
 	
-	public void dropBlockAsItemWithChance(World world, int x, int y, int z){
-		super.dropBlockAsItemWithChance(world, x, y, z, z, blockHardness, z);
-		
-	}
 	
 	@Override
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int meta, int fortune){
