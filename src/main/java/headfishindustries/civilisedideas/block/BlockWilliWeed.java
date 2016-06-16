@@ -22,7 +22,7 @@ public class BlockWilliWeed extends BlockBush {
 		setHardness(0.2F);
 		setStepSound(soundTypeGrass);
 		setTickRandomly(false);
-		setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 0.8F, 0.9F);
+		setBlockBounds(0.05F, 0.0F, 0.05F, 0.94F, 0.87F, 0.94F);
 		setBlockTextureName("ci:WilliWeed");
 	}
 		

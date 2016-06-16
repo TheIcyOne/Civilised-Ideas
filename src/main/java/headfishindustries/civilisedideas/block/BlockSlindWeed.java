@@ -23,7 +23,7 @@ public class BlockSlindWeed extends BlockBush {
 		setHardness(0.2F);
 		setStepSound(soundTypeGrass);
 		setTickRandomly(false);
-		setBlockBounds(0.05F, 0.0F, 0.1F, 1.0F, 0.3F, 1.0F);
+		setBlockBounds(0.05F, 0.0F, 0.05F, 0.94F, 0.87F, 0.94F);
 		setBlockTextureName("ci:SlindWeed");
 	}
 		

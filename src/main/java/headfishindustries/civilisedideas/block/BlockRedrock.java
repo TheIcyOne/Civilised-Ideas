@@ -13,9 +13,9 @@ public class BlockRedrock extends Block{
 		setBlockName("ci_rockRed");
 		setBlockTextureName("ci:rockRed");
 		this.setHarvestLevel("pickaxe", 1);
-        	this.setHardness(1.5F);
-        	this.setResistance(10.0F);
-        	this.setStepSound(soundTypeStone);
+        this.setHardness(1.5F);
+        this.setResistance(10.0F);
+        this.setStepSound(soundTypeStone);
 	}
 	
 }

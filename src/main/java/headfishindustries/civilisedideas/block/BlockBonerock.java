@@ -1,10 +1,13 @@
 package headfishindustries.civilisedideas.block;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Instance;
-import headfishindustries.civilisedideas.CivilisedIdeas;
+import java.util.Random;
+
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSkull;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 
 public class BlockBonerock extends Block{
 
@@ -13,8 +16,9 @@ public class BlockBonerock extends Block{
 		setBlockName("ci_rockBone");
 		setBlockTextureName("ci:rockBone");
 		this.setHarvestLevel("pickaxe", 1);
-	        this.setHardness(1.5F);
-        	this.setResistance(10.0F);
-        	this.setStepSound(soundTypeStone);
+        this.setHardness(1.5F);
+        this.setResistance(10.0F);
+        this.setStepSound(soundTypeStone);
 	}
+
 }
