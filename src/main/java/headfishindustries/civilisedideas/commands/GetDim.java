@@ -7,6 +7,7 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 
 public class GetDim extends CommandBase {
 	@Override
@@ -43,6 +44,6 @@ public class GetDim extends CommandBase {
 	@Override
 	public void processCommand(ICommandSender sender, String[] idontneedthis){
 		EntityPlayer player = getCommandSenderAsPlayer(sender);
-		player.addChatMessage(new ChatComponentText("You are in dimension number " + player.dimension));
+		player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_BLUE + "You are in dimension number " + player.dimension));
 	}
 }
