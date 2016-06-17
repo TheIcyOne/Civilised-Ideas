@@ -8,20 +8,20 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import headfishindustries.civilisedideas.block.BlockBonerock;
 import headfishindustries.civilisedideas.block.BlockRedrock;
 import headfishindustries.civilisedideas.block.BlockSlindWeed;
 import headfishindustries.civilisedideas.block.BlockWilliWeed;
+import headfishindustries.civilisedideas.item.ItemGodstear;
+import headfishindustries.civilisedideas.item.ItemWoodenSplinter;
+import headfishindustries.civilisedideas.item.ItemWoodenWand;
 import headfishindustries.civilisedideas.commands.GetDim;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.command.ICommandManager;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -36,6 +36,9 @@ public class CivilisedIdeas {
 	public static Block blockBonerock = new BlockBonerock();
 	public static Block blockWilliWeed = new BlockWilliWeed();
 	public static Block blockSlindWeed = new BlockSlindWeed();
+	public static Item ItemGodstear = new ItemGodstear();
+	public static Item ItemWoodensplinter = new ItemWoodenSplinter();
+	public static Item ItemWoodenwand = new ItemWoodenWand();
 	
 	//public static Item itemGrapple;
 
@@ -65,7 +68,9 @@ public class CivilisedIdeas {
 		GameRegistry.registerBlock(blockRedrock, "Redrock").setCreativeTab(hypoTab);
 		GameRegistry.registerBlock(blockSlindWeed, "SlindWeed").setCreativeTab(hypoTab);
 		GameRegistry.registerBlock(blockWilliWeed, "WilliWeed").setCreativeTab(hypoTab);
-
+		GameRegistry.registerItem(ItemGodstear, "Godstear");
+		GameRegistry.registerItem(ItemWoodensplinter, "WoodenSplinter");
+		GameRegistry.registerItem(ItemWoodenwand, "WoodenWand");
 	}
 	
 
