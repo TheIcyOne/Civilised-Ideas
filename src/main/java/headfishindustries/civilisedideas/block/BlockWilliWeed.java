@@ -23,20 +23,20 @@ public class BlockWilliWeed extends BlockBush {
 		setStepSound(soundTypeGrass);
 		setTickRandomly(false);
 		setBlockBounds(0.05F, 0.0F, 0.05F, 0.94F, 0.87F, 0.94F);
-		setBlockTextureName("ci:WilliWeed");
+		this.setBlockTextureName("ci:WilliWeed");
 	}
-		
-	   @SideOnly(Side.CLIENT)
+	   @Override
+	   public void registerBlockIcons(IIconRegister par1){
+		   super.registerBlockIcons(par1);
+		   icon = par1.registerIcon("ci:WilliWeed");   
+	   }
+
+	   @Override
 	   public IIcon getIcon(int par1, int par2){
 		   return this.icon;
 	   }
 	   
-	   @SideOnly(Side.CLIENT)
-	   public void registerBlockIcons(IIconRegister par1){
-		   this.icon = par1.registerIcon("ci:williWeed");
-		   
-	   }
-	   
+	   	   
 	   @Override
 	   protected boolean canPlaceBlockOn(Block block){
 		   return block == CivilisedIdeas.blockRedrock || block == CivilisedIdeas.blockBonerock || block == Blocks.grass || block == Blocks.dirt || block == Blocks.farmland;

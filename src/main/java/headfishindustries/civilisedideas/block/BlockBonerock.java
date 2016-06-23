@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -15,6 +16,7 @@ public class BlockBonerock extends Block{
 		setBlockName("ci_rockBone");
 		setBlockTextureName("ci:rockBone");
         this.setStepSound(soundTypeStone);
+        this.setCreativeTab(CreativeTabs.tabBlock);
 	}
 	
 	@Override

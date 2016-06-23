@@ -1,5 +1,6 @@
 package headfishindustries.civilisedideas;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -15,16 +16,19 @@ import headfishindustries.civilisedideas.block.BlockRedrock;
 import headfishindustries.civilisedideas.block.BlockSlindWeed;
 import headfishindustries.civilisedideas.block.BlockWetrock;
 import headfishindustries.civilisedideas.block.BlockWilliWeed;
-import headfishindustries.civilisedideas.item.ItemGodstear;
+import headfishindustries.civilisedideas.commands.GetDim;
+import headfishindustries.civilisedideas.handler.GeneralEventHandler;
 import headfishindustries.civilisedideas.item.ItemWoodenSplinter;
 import headfishindustries.civilisedideas.item.ItemWoodenWand;
-import headfishindustries.civilisedideas.commands.GetDim;
+import headfishindustries.civilisedideas.tab.HypoTab;
+import headfishindustries.civilisedideas.item.ItemGodsTear;
 import net.minecraft.block.Block;
 import net.minecraft.command.ICommandManager;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid="ci",modLanguage = "java", name="Civilised Ideas", version="1.0")
 
@@ -38,7 +42,7 @@ public class CivilisedIdeas {
 	public static Block blockBonerock = new BlockBonerock();
 	public static Block blockWilliWeed = new BlockWilliWeed();
 	public static Block blockSlindWeed = new BlockSlindWeed();
-	public static Item ItemGodstear = new ItemGodstear();
+	public static Item ItemGodstear = new ItemGodsTear();
 	public static Item ItemWoodensplinter = new ItemWoodenSplinter();
 	public static Item ItemWoodenwand = new ItemWoodenWand();
 	
@@ -46,13 +50,7 @@ public class CivilisedIdeas {
 
 	//public static Entity entityGrapple;
 	
-	public static CreativeTabs hypoTab = new CreativeTabs("Hypovolemia"){
-		@Override
-		@SideOnly(Side.CLIENT)
-		public Item getTabIconItem() {
-			return new ItemStack(blockBonerock).getItem();
-		}	
-	};
+	public static CreativeTabs hypoTab = new HypoTab(CreativeTabs.getNextID(), "Hypovolemia");	
 	
 	@EventHandler
 	public void serverStarting(FMLServerStartingEvent event){
@@ -80,7 +78,9 @@ public class CivilisedIdeas {
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		//Proxy, TileEntity, entity, GUI and Packet registration
-	
+		MinecraftForge.EVENT_BUS.register(new GeneralEventHandler());
+		
+		FMLCommonHandler.instance().bus().register(new GeneralEventHandler());
 		
 	}
 	

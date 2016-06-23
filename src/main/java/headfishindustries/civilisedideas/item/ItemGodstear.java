@@ -4,10 +4,12 @@ import headfishindustries.civilisedideas.CivilisedIdeas;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ItemGodstear extends Item {
-	public ItemGodstear()
+public class ItemGodsTear extends Item {
+	public ItemGodsTear()
 	{
 	setUnlocalizedName( "ci_Godstear");
-	setCreativeTab(CivilisedIdeas.hypoTab);
-	setTextureName("ci:Godstear");
-	}}
+	this.setTextureName("ci:Godstear");
+	this.setCreativeTab(CivilisedIdeas.hypoTab);
+	this.setCreativeTab(CreativeTabs.tabMisc);
+	}
+}
