@@ -1,6 +1,7 @@
-package headfishindustries.civilisedideas;
+package com.headfishindustries.civilisedideas;
 
-import headfishindustries.civilisedideas.entities.EntityGrapple;
+import com.headfishindustries.civilisedideas.entities.EntityGrapple;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBow;

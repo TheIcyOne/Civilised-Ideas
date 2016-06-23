@@ -1,4 +1,4 @@
-package headfishindustries.civilisedideas.commands;
+package com.headfishindustries.civilisedideas.commands;
 
 import java.util.ArrayList;
 import java.util.List;

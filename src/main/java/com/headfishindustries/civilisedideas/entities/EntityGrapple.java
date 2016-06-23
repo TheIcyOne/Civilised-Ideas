@@ -1,4 +1,4 @@
-package headfishindustries.civilisedideas.entities;
+package com.headfishindustries.civilisedideas.entities;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

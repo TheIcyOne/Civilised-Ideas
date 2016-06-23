@@ -1,9 +1,10 @@
-package headfishindustries.civilisedideas.block;
+package com.headfishindustries.civilisedideas.block;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import headfishindustries.civilisedideas.CivilisedIdeas;
+import com.headfishindustries.civilisedideas.CivilisedIdeas;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 

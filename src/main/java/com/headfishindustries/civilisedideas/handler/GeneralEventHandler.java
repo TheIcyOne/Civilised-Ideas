@@ -1,4 +1,4 @@
-package headfishindustries.civilisedideas.handler;
+package com.headfishindustries.civilisedideas.handler;
 
 import java.util.Random;
 

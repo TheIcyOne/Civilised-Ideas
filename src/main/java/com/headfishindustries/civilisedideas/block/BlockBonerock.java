@@ -1,4 +1,4 @@
-package headfishindustries.civilisedideas.block;
+package com.headfishindustries.civilisedideas.block;
 
 import java.util.ArrayList;
 

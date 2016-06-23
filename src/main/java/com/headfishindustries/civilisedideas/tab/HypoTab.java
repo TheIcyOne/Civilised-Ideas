@@ -1,6 +1,7 @@
-package headfishindustries.civilisedideas.tab;
+package com.headfishindustries.civilisedideas.tab;
 
-import headfishindustries.civilisedideas.CivilisedIdeas;
+import com.headfishindustries.civilisedideas.CivilisedIdeas;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

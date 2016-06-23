@@ -1,7 +1,9 @@
-package headfishindustries.civilisedideas.entities.render;
+package com.headfishindustries.civilisedideas.entities.render;
 
-import headfishindustries.civilisedideas.entities.EntityGrapple;
 import net.minecraft.entity.Entity;
+
+import com.headfishindustries.civilisedideas.entities.EntityGrapple;
+
 import net.minecraft.client.renderer.entity.RenderArrow;
 
 public class RenderGrapple extends RenderArrow {

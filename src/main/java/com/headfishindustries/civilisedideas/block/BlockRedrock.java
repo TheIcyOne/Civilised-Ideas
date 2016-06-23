@@ -1,8 +1,9 @@
-package headfishindustries.civilisedideas.block;
+package com.headfishindustries.civilisedideas.block;
+
+import com.headfishindustries.civilisedideas.CivilisedIdeas;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
-import headfishindustries.civilisedideas.CivilisedIdeas;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

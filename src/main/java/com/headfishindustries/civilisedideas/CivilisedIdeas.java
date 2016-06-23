@@ -1,4 +1,16 @@
-package headfishindustries.civilisedideas;
+package com.headfishindustries.civilisedideas;
+
+import com.headfishindustries.civilisedideas.block.BlockBonerock;
+import com.headfishindustries.civilisedideas.block.BlockRedrock;
+import com.headfishindustries.civilisedideas.block.BlockSlindWeed;
+import com.headfishindustries.civilisedideas.block.BlockWetrock;
+import com.headfishindustries.civilisedideas.block.BlockWilliWeed;
+import com.headfishindustries.civilisedideas.commands.GetDim;
+import com.headfishindustries.civilisedideas.handler.GeneralEventHandler;
+import com.headfishindustries.civilisedideas.item.ItemGodsTear;
+import com.headfishindustries.civilisedideas.item.ItemWoodenSplinter;
+import com.headfishindustries.civilisedideas.item.ItemWoodenWand;
+import com.headfishindustries.civilisedideas.tab.HypoTab;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -11,17 +23,6 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import headfishindustries.civilisedideas.block.BlockBonerock;
-import headfishindustries.civilisedideas.block.BlockRedrock;
-import headfishindustries.civilisedideas.block.BlockSlindWeed;
-import headfishindustries.civilisedideas.block.BlockWetrock;
-import headfishindustries.civilisedideas.block.BlockWilliWeed;
-import headfishindustries.civilisedideas.commands.GetDim;
-import headfishindustries.civilisedideas.handler.GeneralEventHandler;
-import headfishindustries.civilisedideas.item.ItemWoodenSplinter;
-import headfishindustries.civilisedideas.item.ItemWoodenWand;
-import headfishindustries.civilisedideas.tab.HypoTab;
-import headfishindustries.civilisedideas.item.ItemGodsTear;
 import net.minecraft.block.Block;
 import net.minecraft.command.ICommandManager;
 import net.minecraft.command.ServerCommandManager;

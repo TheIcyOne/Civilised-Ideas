@@ -1,12 +1,13 @@
-package headfishindustries.civilisedideas.entities;
+package com.headfishindustries.civilisedideas.entities;
+
+import com.headfishindustries.civilisedideas.CivilisedIdeas;
+import com.headfishindustries.civilisedideas.entities.*;
+import com.headfishindustries.civilisedideas.entities.render.*;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import headfishindustries.civilisedideas.CivilisedIdeas;
-import headfishindustries.civilisedideas.entities.*;
-import headfishindustries.civilisedideas.entities.render.*;
 
 public class EntityManager{
 	public static final EntityManager instance = new EntityManager();
