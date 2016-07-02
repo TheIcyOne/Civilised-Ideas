@@ -6,7 +6,6 @@ import com.headfishindustries.civilisedideas.block.BlockSlindWeed;
 import com.headfishindustries.civilisedideas.block.BlockWetrock;
 import com.headfishindustries.civilisedideas.block.BlockWilliWeed;
 import com.headfishindustries.civilisedideas.commands.GetDim;
-import com.headfishindustries.civilisedideas.handler.GeneralEventHandler;
 import com.headfishindustries.civilisedideas.item.ItemGodsTear;
 import com.headfishindustries.civilisedideas.item.ItemWoodenSplinter;
 import com.headfishindustries.civilisedideas.item.ItemWoodenWand;
@@ -79,9 +78,6 @@ public class CivilisedIdeas {
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		//Proxy, TileEntity, entity, GUI and Packet registration
-		MinecraftForge.EVENT_BUS.register(new GeneralEventHandler());
-		
-		FMLCommonHandler.instance().bus().register(new GeneralEventHandler());
 		
 	}
 	

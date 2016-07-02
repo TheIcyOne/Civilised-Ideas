@@ -17,6 +17,9 @@ public class BlockBonerock extends Block{
 		setBlockTextureName("ci:rockBone");
         this.setStepSound(soundTypeStone);
         this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setHarvestLevel("pickaxe", 0);
+        this.setHardness(1.5F);
+        this.setResistance(7.5F);
 	}
 	
 	@Override
