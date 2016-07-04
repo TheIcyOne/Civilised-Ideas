@@ -1,17 +1,13 @@
 package com.headfishindustries.civilisedideas;
 
-import com.headfishindustries.civilisedideas.block.BlockBonerock;
-import com.headfishindustries.civilisedideas.block.BlockRedrock;
-import com.headfishindustries.civilisedideas.block.BlockSlindWeed;
-import com.headfishindustries.civilisedideas.block.BlockWetrock;
-import com.headfishindustries.civilisedideas.block.BlockWilliWeed;
+import com.headfishindustries.civilisedideas.block.*;
 import com.headfishindustries.civilisedideas.commands.GetDim;
 import com.headfishindustries.civilisedideas.item.ItemGodsTear;
 import com.headfishindustries.civilisedideas.item.ItemWoodenSplinter;
 import com.headfishindustries.civilisedideas.item.ItemWoodenWand;
 import com.headfishindustries.civilisedideas.tab.HypoTab;
-
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -20,15 +16,13 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.command.ICommandManager;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import org.apache.logging.log4j.Logger;
 
 @Mod(modid="ci",modLanguage = "java", name="Civilised Ideas", version="1.0")
 
@@ -36,6 +30,7 @@ public class CivilisedIdeas {
 	
 	@Instance(value = "ci")
 	public static CivilisedIdeas instance;
+    public static Logger logger;
 	
 	public static Block blockRedrock = new BlockRedrock();
 	public static Block blockWetrock = new BlockWetrock();
@@ -61,6 +56,8 @@ public class CivilisedIdeas {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
+        logger = event.getModLog();
+
 		//Block and Item Initialization
 		//itemGrapple = new ItemGrapple();
 		
@@ -78,7 +75,10 @@ public class CivilisedIdeas {
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		//Proxy, TileEntity, entity, GUI and Packet registration
-		
+        FMLLog.info("Registering ReplaceHandler");
+        FMLCommonHandler.instance().bus().register(new ReplaceHandler());
+        MinecraftForge.EVENT_BUS.register(new ReplaceHandler());
+
 	}
 	
 	public void postInit(FMLPostInitializationEvent event) {
