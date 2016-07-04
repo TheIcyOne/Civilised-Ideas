@@ -1,7 +1,7 @@
 [
 {
   "modid": "ci",
-  "name": "Civilised Ideas",
+  "name": "${modid}",
   "description": "Just the little things you need for a civilised time.",
   "version": "${version}",
   "mcversion": "${mcversion}",
