@@ -18,15 +18,15 @@ public class BlockBonerock extends Block{
         this.setStepSound(soundTypeStone);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.setHarvestLevel("pickaxe", 0);
-        this.setHardness(1.5F);
+        this.setHardness(0.2F);
         this.setResistance(7.5F);
 	}
 	
 	@Override
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int meta, int fortune){
 		ArrayList<ItemStack> drop = new ArrayList<ItemStack>();
-		drop.add(new ItemStack(Items.skull, world.rand.nextInt(3) + fortune, 0));
-		drop.add(new ItemStack(Items.bone, world.rand.nextInt(6) + 2 + fortune));
+		drop.add(new ItemStack(Items.skull, world.rand.nextInt(9) + 1, 0));
+		drop.add(new ItemStack(Items.bone, world.rand.nextInt(1) + 0));
 		return drop;
 	}
 
